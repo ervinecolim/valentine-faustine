@@ -23,11 +23,13 @@
     border-radius: 25px;
     text-align: center;
     box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-    max-width: 420px;
+    position: relative;
+    max-width: 400px;
   }
 
   h1 {
     color: #e63946;
+    margin-bottom: 10px;
   }
 
   p {
@@ -55,6 +57,7 @@
   }
 
   #yesBtn:hover {
+    background-color: #d62828;
     transform: scale(1.15);
   }
 
@@ -62,13 +65,6 @@
     background-color: #adb5bd;
     color: white;
     position: relative;
-  }
-
-  .love-message {
-    max-width: 600px;
-    text-align: center;
-    padding: 40px;
-    color: white;
   }
 
   .heart {
@@ -79,8 +75,16 @@
   }
 
   @keyframes floatUp {
-    0% { bottom: 0; opacity: 1; }
-    100% { bottom: 100vh; opacity: 0; }
+    0% {
+      bottom: 0;
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      bottom: 100vh;
+      opacity: 0;
+      transform: translateX(50px);
+    }
   }
 </style>
 </head>
@@ -111,21 +115,10 @@
 
   yesBtn.addEventListener("click", () => {
     document.body.innerHTML = `
-      <div style="display:flex;justify-content:center;align-items:center;height:100vh;background:linear-gradient(135deg,#ff758c,#ff7eb3);">
-        <div class="love-message">
-          <h1>Faustine 💖</h1>
-          <h2>From the moment I met you, my world became brighter.</h2>
-          <p>
-            Your smile feels like sunshine on my darkest days.
-            Your laughter is my favorite sound.
-            And every moment with you feels like a beautiful dream
-            I never want to wake up from.
-          </p>
-          <p>
-            I don’t just want today with you,
-            I want every tomorrow too. 💕
-          </p>
-          <h2>Will you be mine, not just today… but always? ❤️</h2>
+      <div style="display:flex;justify-content:center;align-items:center;height:100vh;background:linear-gradient(135deg,#ff758c,#ff7eb3);color:white;font-family:sans-serif;text-align:center;">
+        <div>
+          <h1>Yayyy Faustine!! 💖</h1>
+          <h2>You just made me the happiest person ever 💕</h2>
         </div>
       </div>
     `;
